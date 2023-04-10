@@ -199,26 +199,26 @@ body {
 #botaoEnviar:hover {
     background-color: #626d77;
     box-shadow:
-    5.4px 3.3px 11px -39px rgba(0, 0, 0, 0.158),
-    40px 24px 80px -39px rgba(0, 0, 0, 0.26);
+        5.4px 3.3px 11px -39px rgba(0, 0, 0, 0.158),
+        40px 24px 80px -39px rgba(0, 0, 0, 0.26);
 }
 
 .container__aside>a:hover {
     background-color: #626d77;
     box-shadow:
-    5.4px 3.3px 11px -39px rgba(0, 0, 0, 0.158),
-    40px 24px 80px -39px rgba(0, 0, 0, 0.26);
+        5.4px 3.3px 11px -39px rgba(0, 0, 0, 0.158),
+        40px 24px 80px -39px rgba(0, 0, 0, 0.26);
 }
 
 .container__menu>a:hover {
     background-color: #626d77;
     box-shadow:
-    5.4px 3.3px 11px -39px rgba(0, 0, 0, 0.158),
-    40px 24px 80px -39px rgba(0, 0, 0, 0.26);
+        5.4px 3.3px 11px -39px rgba(0, 0, 0, 0.158),
+        40px 24px 80px -39px rgba(0, 0, 0, 0.26);
 }
 
 
-/* MIDIAQUERY */
+/* Site Responsivo */
 
 @media screen and (max-width:601px) {
     body {
@@ -226,10 +226,10 @@ body {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         grid-template-areas:
-        "titulo"
-        "menu"
-        "aside"
-        "contato"
+            "titulo"
+            "menu"
+            "aside"
+            "contato"
             "rodape"
         ;
     }
