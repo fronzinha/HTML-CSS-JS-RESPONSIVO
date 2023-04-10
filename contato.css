@@ -1,0 +1,255 @@
+/* Fonte e box do site */
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Cores pro site */
+
+:root {
+    --cor-amarelo: #FCE6A8;
+    --cor-verde: #D2E4E1;
+    --cor-cinza-claro: #e3e8ed;
+    --cor-cinza-medio: #ced8e0;
+    --cor-cinza-escuro: #788896;
+    --cor-hover: #747c83;
+    --cor-active: #55636e;
+    --cor-branca: #fff;
+    --cor-erro: #e0422e;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--cor-amarelo);
+    margin: 0px;
+    height: 100vh;
+    padding: 5px;
+    gap: 5px;
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    grid-template-rows: 0.2fr 1fr 0.1fr;
+    grid-template-areas:
+        "menu titulo"
+        "aside contato"
+        "rodape rodape"
+    ;
+}
+
+.container__menu {
+    background-color: var(--cor-verde);
+    grid-area: menu;
+    gap: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container__menu>a {
+    background-color: var(--cor-cinza-escuro);
+    color: white;
+    text-decoration: none;
+    font-size: 23px;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.titulo {
+    background-color: var(--cor-verde);
+    grid-area: titulo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo>span {
+    font-size: 3rem;
+    margin: 0px;
+}
+
+.container__aside {
+    background-color: var(--cor-verde);
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.container__contato {
+    background-color: var(--cor-verde);
+    grid-area: contato;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.rodape {
+    background-color: var(--cor-verde);
+    grid-area: rodape;
+    padding: 10px;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container__aside>a {
+    background-color: var(--cor-cinza-escuro);
+    color: white;
+    text-decoration: none;
+    font-size: 23px;
+    padding: 8px 15px 8px 15px;
+    width: 200px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.container__aside>img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+/* Conteudo Principal */
+
+.contato {
+    background-color: #d1d4d6;
+    padding: 20px;
+    height: 350px;
+    gap: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "nome sobrenome"
+        "email email"
+        "mensagem mensagem"
+        "botao botao"
+        "retornoEnvio retornoEnvio"
+    ;
+}
+
+
+#inputName {
+    grid-area: nome;
+    height: 30px;
+    padding: 5px;
+    border: solid var(--cor-cinza-medio);
+    border-radius: 5px;
+    font-size: 1.4rem;
+}
+
+#inputSobrenome {
+    grid-area: sobrenome;
+    border: solid var(--cor-cinza-medio);
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1.4rem;
+}
+
+#inputEmail {
+    grid-area: email;
+    border: solid var(--cor-cinza-medio);
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1.4rem;
+}
+
+#inputMensagem {
+    grid-area: mensagem;
+    border: solid var(--cor-cinza-medio);
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 1.4rem;
+}
+
+#botaoEnviar {
+    background-color: var(--cor-cinza-escuro);
+    grid-area: botao;
+    color: white;
+    width: 100%;
+    height: 40px;
+    padding: 1px 15px 1px 15px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    border-radius: 5px;
+}
+
+#mensagemRetorno {
+    background-color: green;
+    grid-area: retornoEnvio;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    display: none;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+
+}
+
+#botaoEnviar:hover {
+    background-color: #626d77;
+    box-shadow:
+    5.4px 3.3px 11px -39px rgba(0, 0, 0, 0.158),
+    40px 24px 80px -39px rgba(0, 0, 0, 0.26);
+}
+
+.container__aside>a:hover {
+    background-color: #626d77;
+    box-shadow:
+    5.4px 3.3px 11px -39px rgba(0, 0, 0, 0.158),
+    40px 24px 80px -39px rgba(0, 0, 0, 0.26);
+}
+
+.container__menu>a:hover {
+    background-color: #626d77;
+    box-shadow:
+    5.4px 3.3px 11px -39px rgba(0, 0, 0, 0.158),
+    40px 24px 80px -39px rgba(0, 0, 0, 0.26);
+}
+
+
+/* MIDIAQUERY */
+
+@media screen and (max-width:601px) {
+    body {
+        gap: 5px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "titulo"
+        "menu"
+        "aside"
+        "contato"
+            "rodape"
+        ;
+    }
+
+    .contato {
+        background-color: var(--cor-cinza-claro);
+        padding: 5px 5px 5px 5px;
+        gap: 10px;
+        height: 350px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "nome"
+            "sobrenome"
+            "email"
+            "mensagem"
+            "botao"
+            "retornoEnvio"
+        ;
+    }
+
+}

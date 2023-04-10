@@ -1,0 +1,256 @@
+/* Fonte e box do site */
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Cores pro site */
+
+:root {
+    --cor-amarelo: #FCE6A8;
+    --cor-verde: #D2E4E1;
+    --cor-cinza-claro: #e3e8ed;
+    --cor-cinza-medio: #ced8e0;
+    --cor-cinza-escuro: #788896;
+    --cor-hover: #747c83;
+    --cor-active: #55636e;
+    --cor-branca: #fff;
+    --cor-erro: #e0422e;
+}
+
+body {
+    background-color: var(--cor-amarelo);
+    margin: 0px;
+    padding: 10px;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    grid-template-rows: 0.2fr 1fr 0.1fr;
+    gap: 8px;
+
+    grid-template-areas:
+        "menu titulo"
+        "principal principal"
+        "rodape rodape"
+    ;
+}
+
+/* Menu */
+
+.container__menu {
+    background-color: var(--cor-verde);
+    grid-area: menu;
+    gap: 8px;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container__menu>a {
+    background-color: var(--cor-cinza-escuro);
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.titulo {
+    background-color: var(--cor-verde);
+    grid-area: titulo;
+    font-size: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Principal */
+
+.container__principal {
+    background-color: var(--cor-verde);
+    grid-area: principal;
+    gap: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteudo {
+    background-color: var(--cor-cinza-claro);
+    gap: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* Rodape */
+
+.container__rodape {
+    background-color: var(--cor-verde);
+    grid-area: rodape;
+    font-size: 0.8rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style da div entrada, input e botão Somatoria e Pokemon */
+
+.entradas {
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.entradas>input {
+    border: solid var(--cor-cinza-medio);
+    font-size: 1rem;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+button {
+    background-color: var(--cor-cinza-escuro);
+    padding: 5px;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    color: white;
+}
+
+#botaoSomar:hover {
+    background-color: #626d77;
+    box-shadow:
+        5.4px 3.3px 11px -39px rgba(0, 0, 0, 0.158),
+        40px 24px 80px -39px rgba(0, 0, 0, 0.26);
+}
+
+#botaoBuscar:hover {
+    background-color: #626d77;
+    box-shadow:
+        5.4px 3.3px 11px -39px rgba(0, 0, 0, 0.158),
+        40px 24px 80px -39px rgba(0, 0, 0, 0.26);
+}
+
+.container__menu>a:hover {
+    background-color: #626d77;
+    box-shadow:
+        5.4px 3.3px 11px -39px rgba(0, 0, 0, 0.158),
+        40px 24px 80px -39px rgba(0, 0, 0, 0.26);
+}
+
+
+/* Style da div Soma */
+
+.saida {
+    background-color: var(--cor-cinza-medio);
+    border: solid var(--cor-hover);
+    width: 180px;
+    height: 180px;
+
+    display: flex;
+    flex-direction: column;
+    word-break: break-all;
+}
+
+.saida span {
+    margin: 0px;
+    font-size: 20px;
+}
+
+.saida>#resultado {
+    font-size: 4rem;
+    flex-basis: 0;
+    flex-grow: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    word-break: break-all;
+}
+
+
+/* Style da div Pokemon */
+
+.saida {
+    background-color: var(--cor-cinza-medio);
+    border: solid var(--cor-cinza-escuro);
+    width: 180px;
+    height: 180px;
+    padding-top: 5px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#nomeDoPokemon {
+    margin: 0px;
+    padding-left: 5px;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+#imagemDoPokemon {
+    align-self: center;
+    flex-basis: 1;
+    flex-grow: 1;
+}
+
+/* Responsividade */
+
+@media screen and (max-width:601px) {
+    body {
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.1fr 1fr 1fr 0.1fr;
+
+        grid-template-areas:
+            "titulo"
+            "menu"
+            "principal"
+            "rodape"
+        ;
+    }
+
+    .titulo>span {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .container__principal {
+        padding: 10px;
+    }
+
+    .conteudo {
+        padding: 5px 5px 5px 5px;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .saida {
+        width: 100%;
+    }
+
+    .entradas {
+        padding-left: 0px;
+        width: 100%;
+    }
+
+    .saida {
+        width: 100%;
+    }
+}
