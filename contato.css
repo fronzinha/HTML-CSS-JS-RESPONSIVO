@@ -220,7 +220,7 @@ body {
 
 /* Site Responsivo */
 
-@media screen and (max-width:601px) {
+@media screen and (max-width:640px) {
     body {
         gap: 5px;
         grid-template-columns: 1fr;
